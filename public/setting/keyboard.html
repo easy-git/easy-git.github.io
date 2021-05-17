@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.png" />
+    
+
+    <title>
+        
+          easy-git
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/css/book.css">
+
+    
+<script src="/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <a href="/">
+    <img src="/favicon.png">
+    <span>EASY-GIT</span>
+  </a>
+</div>
+    <div id="menu" class="book-menu hide">
+  <h1><a href="/sponsor">赞助</a></h1>
+<h1><a href="/">主页</a></h1>
+<h1><a href="/home/install">插件安装</a></h1>
+<h1><a href="/home/git-install">Git工具安装</a></h1>
+<h1><a href="/oauth">OAuth授权</a></h1>
+<h2 id="插件设置">插件设置</h2>
+<ul>
+<li><a href="/setting">插件设置</a></li>
+<li><a href="/setting/keyboard">设置快捷键</a></li>
+<li><a href="/setting/voice">语音提示</a></li>
+<li><a href="/setting/autoRefresh">自动刷新</a></li>
+</ul>
+<h2 id="Git-克隆-连接">Git 克隆/连接</h2>
+<ul>
+<li><a href="/connecting">前言</a></li>
+<li><a href="/connecting/clone">开始克隆</a></li>
+<li><a href="/connecting/github-search">搜索Github存储库</a></li>
+<li><a href="/connecting/init">初始化</a></li>
+</ul>
+<h2 id="源代码管理器">源代码管理器</h2>
+<ul>
+<li><a href="/docs/file">概览</a></li>
+<li><a href="/docs/file/pull">拉取 - pull</a></li>
+<li><a href="/docs/file/commit">提交 - commit</a></li>
+<li><a href="/docs/file/push">推送 - push</a></li>
+<li><a href="/docs/file/add">暂存 - add</a></li>
+<li><a href="/docs/file/fetch">抓取 - fetch</a></li>
+<li><a href="/docs/file/cancel_add">取消暂存 - restore</a></li>
+<li><a href="/docs/file/cancel_change">撤销修改 - restore</a></li>
+</ul>
+<h2 id="储藏-stash">储藏 (stash)</h2>
+<ul>
+<li><a href="/docs/stash/stash">储藏</a></li>
+<li><a href="/docs/stash/pop">弹出储藏</a></li>
+<li><a href="/docs/stash/show">查看储藏</a></li>
+</ul>
+<h2 id="日志视图">日志视图</h2>
+<ul>
+<li><a href="/docs/log">概览</a></li>
+<li><a href="/docs/log/details">查看log详情</a></li>
+<li><a href="/docs/log/search">搜索</a></li>
+</ul>
+<h2 id="分支-标签">分支/标签</h2>
+<ul>
+<li><a href="/docs/refs">简介</a></li>
+<li><a href="/docs/refs/branch/switch">分支切换</a></li>
+<li><a href="/docs/refs/branch/create">分支创建</a></li>
+<li><a href="/docs/refs/tag/create">标签创建 - tag</a></li>
+</ul>
+<h2 id="命令面板">命令面板</h2>
+<ul>
+<li><a href="/CommandPanel">概览</a></li>
+</ul>
+<h2 id="Git技巧">Git技巧</h2>
+<ul>
+<li><a href="/docs/blame">查看当前行最后一次修改信息</a></li>
+<li><a href="/docs/annotate">用提交信息标注文件中的每一行</a></li>
+<li><a href="/docs/fileHistory">查看文件的某个历史版本内容</a></li>
+</ul>
+<h2 id="身份认证">身份认证</h2>
+<ul>
+<li><a href="/auth/ssh-check">检查现有 SSH 密钥</a></li>
+<li><a href="/auth/ssh-generate">生成新的 SSH 密钥并配置Git服务器</a></li>
+<li><a href="/auth/ssh-more">Git配置多个SSH-Key</a></li>
+<li><a href="/auth/http">windows: 记住Git凭据</a></li>
+</ul>
+<h2 id="扩展功能">扩展功能</h2>
+<ul>
+<li><a href="/extensions/create-remote-repo">创建远程仓库</a></li>
+</ul>
+<h2 id="问题">问题</h2>
+<ul>
+<li><a href="/question/quote">Q1: 中文乱码问题</a></li>
+<li><a href="/question/username">Q2: 身份认证问题</a></li>
+</ul>
+<h2 id="其它">其它</h2>
+<ul>
+<li><a href="/about-count">数据统计说明</a></li>
+</ul>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?33e901cc42b01f75e6230c5412711716";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+
+
+<script src="/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="sidebar-toggle" onclick="sidebar_toggle()" onmouseover="add_inner()" onmouseleave="remove_inner()">
+  <div class="sidebar-toggle-inner"></div>
+</div>
+
+<script>
+function add_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.add('show')  
+}
+
+function remove_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.remove('show')
+}
+
+function sidebar_toggle() {
+    let sidebar_toggle = document.querySelector('.sidebar-toggle')
+    let sidebar = document.querySelector('.book-sidebar')
+    let content = document.querySelector('.off-canvas-content')
+    if (sidebar_toggle.classList.contains('extend')) { // show
+        sidebar_toggle.classList.remove('extend')
+        sidebar.classList.remove('hide')
+        content.classList.remove('extend')
+    }
+    else { // hide
+        sidebar_toggle.classList.add('extend')
+        sidebar.classList.add('hide')
+        content.classList.add('extend')
+    }
+}
+</script>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          
+<article id="page">
+  <h1></h1>
+  <h1>设置快捷键</h1>
+<p>easy-git, 支持通过快捷键打开git视图。</p>
+<p>点击菜单【工具】【自定义快捷键】，可自定义快捷键。</p>
+<h5 id="说明">说明</h5>
+<ul>
+<li>目前只暴露了以下command。</li>
+<li>请逐条拷贝，设置快捷键时，请仔细检查语法格式。</li>
+<li>如需要更多commmand，请到<a target="_blank" rel="noopener" href="https://ext.dcloud.net.cn/plugin?id=2475">HBuilderX插件市场</a>留言。</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 命令面板</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.CommandPanel&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 打开Git文件视图</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.main&quot;</span>&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 查看日志</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.log&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git commit</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.commit&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git 修改最后提交的commit消息</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.commitAmend&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git克隆</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.clone&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git 文件对比</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.diffFile&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git restore 取消更改</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.restore&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git restore staged 取消暂存</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.restoreStaged&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git 撤销上一次commit</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.resetSoftLastCommit&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git 重置代码到上次提交</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.resetHardLastCommit&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git 重置代码到指定提交</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.resetHardCommitID&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git pull --rebase</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.pull&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git stash 储藏</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.stash&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git stash 储藏全部(包含未跟踪的)</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.stashAll&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git stash 弹出储藏</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.stashPop&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git stash 弹出最新储藏</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.stashPopNew&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git stash 删除所有储藏</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.stashClear&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git stash 查看某个储藏的文件列表以及差异</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.stashShow&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git Blame 显示git文件当前行最后一次修改信息</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.gitBlameForLineChange&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git tag 创建标签</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.tagCreate&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git tag 查看标签详情</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.tagDetails&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git init</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.init&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git add Remote Origin</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.addRemoteOrigin&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git merge</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.merge&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git merge --abort</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.mergeAbort&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git Branch switch</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.BranchSwitch&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git Branch Delete</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.BranchDelete&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git Branch Diff</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.BranchDiff&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git Branch diff file 显示两个分支指定文件的差异</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.twoBranchSpecificFileDiff&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git reflog</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.reflog&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git 归档</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.archive&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git 查看文件在另一个分支的内容(无需切换分支)</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.showAnotherBranchFile&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git 在浏览器查看Git仓库</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.openGitRepositoryInBrowser&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git cofing --list</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.showConfig&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git oauth</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.oauth&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git 创建远程仓库</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.CreateRemoteRepository&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除远程仓库url</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.RemoteRmOrigin&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Git 查看文件的历史提交版本内容</span></span><br><span class="line">&#123;<span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&quot;</span>,<span class="attr">&quot;command&quot;</span>: <span class="string">&quot;EasyGit.showHashFile&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+</article>
+
+<div id="paginator">
+  
+</div>
+
+        </div>
+      </div>
+      <div class="column col-2 hide-lg">
+        <div class="book-post-info">
+  
+    <div class="book-post-meta">
+
+  <div class="author">
+
+    <!-- Author image -->
+    <div class="author-img">
+      
+        <figure
+          class="avatar avatar-lg"
+          data-initial="o"
+          style="background-color: #3b4351;">
+        </figure>
+      
+    </div>
+
+    <!-- Author title -->
+    <div class="author-title">
+      <div>oneone</div>
+      <div>2021-01-09</div>
+    </div>
+  </div>
+
+  
+
+  <div class="divider"></div>
+</div>
+  
+
+  <div class="book-tocbot">
+</div>
+<div class="book-tocbot-menu">
+  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+  <a onclick="go_top()">Back to top</a>
+  <a onclick="go_bottom()">Go to bottom</a>
+</div>
+
+
+<script src="/js/book-toc.js"></script>
+
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+</body>
+</html>
+
+
+<script src="/js/book.js"></script>

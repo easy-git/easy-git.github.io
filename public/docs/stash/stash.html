@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.png" />
+    
+
+    <title>
+        
+          easy-git
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.9/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/css/book.css">
+
+    
+<script src="/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <a href="/">
+    <img src="/favicon.png">
+    <span>EASY-GIT</span>
+  </a>
+</div>
+    <div id="menu" class="book-menu hide">
+  <h1><a href="/sponsor">赞助</a></h1>
+<h1><a href="/">主页</a></h1>
+<h1><a href="/home/install">插件安装</a></h1>
+<h1><a href="/home/git-install">Git工具安装</a></h1>
+<h1><a href="/oauth">OAuth授权</a></h1>
+<h2 id="插件设置">插件设置</h2>
+<ul>
+<li><a href="/setting">插件设置</a></li>
+<li><a href="/setting/keyboard">设置快捷键</a></li>
+<li><a href="/setting/voice">语音提示</a></li>
+<li><a href="/setting/autoRefresh">自动刷新</a></li>
+</ul>
+<h2 id="Git-克隆-连接">Git 克隆/连接</h2>
+<ul>
+<li><a href="/connecting">前言</a></li>
+<li><a href="/connecting/clone">开始克隆</a></li>
+<li><a href="/connecting/github-search">搜索Github存储库</a></li>
+<li><a href="/connecting/init">初始化</a></li>
+</ul>
+<h2 id="源代码管理器">源代码管理器</h2>
+<ul>
+<li><a href="/docs/file">概览</a></li>
+<li><a href="/docs/file/pull">拉取 - pull</a></li>
+<li><a href="/docs/file/commit">提交 - commit</a></li>
+<li><a href="/docs/file/push">推送 - push</a></li>
+<li><a href="/docs/file/add">暂存 - add</a></li>
+<li><a href="/docs/file/fetch">抓取 - fetch</a></li>
+<li><a href="/docs/file/cancel_add">取消暂存 - restore</a></li>
+<li><a href="/docs/file/cancel_change">撤销修改 - restore</a></li>
+</ul>
+<h2 id="储藏-stash">储藏 (stash)</h2>
+<ul>
+<li><a href="/docs/stash/stash">储藏</a></li>
+<li><a href="/docs/stash/pop">弹出储藏</a></li>
+<li><a href="/docs/stash/show">查看储藏</a></li>
+</ul>
+<h2 id="日志视图">日志视图</h2>
+<ul>
+<li><a href="/docs/log">概览</a></li>
+<li><a href="/docs/log/details">查看log详情</a></li>
+<li><a href="/docs/log/search">搜索</a></li>
+</ul>
+<h2 id="分支-标签">分支/标签</h2>
+<ul>
+<li><a href="/docs/refs">简介</a></li>
+<li><a href="/docs/refs/branch/switch">分支切换</a></li>
+<li><a href="/docs/refs/branch/create">分支创建</a></li>
+<li><a href="/docs/refs/tag/create">标签创建 - tag</a></li>
+</ul>
+<h2 id="命令面板">命令面板</h2>
+<ul>
+<li><a href="/CommandPanel">概览</a></li>
+</ul>
+<h2 id="Git技巧">Git技巧</h2>
+<ul>
+<li><a href="/docs/blame">查看当前行最后一次修改信息</a></li>
+<li><a href="/docs/annotate">用提交信息标注文件中的每一行</a></li>
+<li><a href="/docs/fileHistory">查看文件的某个历史版本内容</a></li>
+</ul>
+<h2 id="身份认证">身份认证</h2>
+<ul>
+<li><a href="/auth/ssh-check">检查现有 SSH 密钥</a></li>
+<li><a href="/auth/ssh-generate">生成新的 SSH 密钥并配置Git服务器</a></li>
+<li><a href="/auth/ssh-more">Git配置多个SSH-Key</a></li>
+<li><a href="/auth/http">windows: 记住Git凭据</a></li>
+</ul>
+<h2 id="扩展功能">扩展功能</h2>
+<ul>
+<li><a href="/extensions/create-remote-repo">创建远程仓库</a></li>
+</ul>
+<h2 id="问题">问题</h2>
+<ul>
+<li><a href="/question/quote">Q1: 中文乱码问题</a></li>
+<li><a href="/question/username">Q2: 身份认证问题</a></li>
+</ul>
+<h2 id="其它">其它</h2>
+<ul>
+<li><a href="/about-count">数据统计说明</a></li>
+</ul>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?33e901cc42b01f75e6230c5412711716";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+
+
+<script src="/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="sidebar-toggle" onclick="sidebar_toggle()" onmouseover="add_inner()" onmouseleave="remove_inner()">
+  <div class="sidebar-toggle-inner"></div>
+</div>
+
+<script>
+function add_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.add('show')  
+}
+
+function remove_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.remove('show')
+}
+
+function sidebar_toggle() {
+    let sidebar_toggle = document.querySelector('.sidebar-toggle')
+    let sidebar = document.querySelector('.book-sidebar')
+    let content = document.querySelector('.off-canvas-content')
+    if (sidebar_toggle.classList.contains('extend')) { // show
+        sidebar_toggle.classList.remove('extend')
+        sidebar.classList.remove('hide')
+        content.classList.remove('extend')
+    }
+    else { // hide
+        sidebar_toggle.classList.add('extend')
+        sidebar.classList.add('hide')
+        content.classList.add('extend')
+    }
+}
+</script>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          
+<article id="page">
+  <h1></h1>
+  <h1>git stash: 储藏</h1>
+<blockquote>
+<p>git stash, 它是 Git 最有用的功能之一</p>
+</blockquote>
+<h2 id="好处">好处</h2>
+<ul>
+<li>stash会把所有未提交的修改（包括暂存的和非暂存的）都保存起来，用于后续恢复当前工作目录。</li>
+<li>储藏后，会将当前代码切换到<code>HEAD</code>提交上.</li>
+<li>储藏后，回到之前最后一次提交的干净的工作仓库。</li>
+</ul>
+<h2 id="应用举例">应用举例</h2>
+<ul>
+<li>做了一半的需求, 需要先做别的需求</li>
+<li>开发一半功能, 需要同步远端代码。如果冲突呢？遇到这种情况, 可以先保存本地修改, 进行<code>git pull</code>, 然后再<code>pop</code>出本地代码。</li>
+<li>提交特定文件。如果对多个文件做了修改,但是只想提交几个文件, 或者想先暂时保存几个修改,测试其他文件的执行结果.可以通过<code>git stash save --keep-index</code>来进行.</li>
+</ul>
+<h2 id="如何使用？">如何使用？</h2>
+<ul>
+<li>easy-git源代码管理器视图，点击顶部菜单【…】，点击【储藏】，然后输入<code>储藏消息</code></li>
+<li>打开命令面板，搜索<code>stash - 储藏</code>, 弹框，然后输入<code>储藏消息</code></li>
+</ul>
+<div style="margin: 1rem 0 1rem 1rem;">
+    <img src="/static/stash.png" />
+</div>
+<h2 id="储藏、储藏全部的区别">储藏、储藏全部的区别</h2>
+<p>默认情况下，git stash会缓存下列文件：</p>
+<ul>
+<li>添加到暂存区的修改（staged changes）</li>
+<li>Git跟踪的但并未添加到暂存区的修改（unstaged changes）</li>
+</ul>
+<p>但不会缓存以下文件：</p>
+<ul>
+<li>工作目录中，新建的文件（untracked files）</li>
+<li>被忽略的文件（ignored files）</li>
+</ul>
+<p>储藏全部，会储藏当前目录下的所有修改</p>
+<h2 id="Git-命令知识点：储藏">Git 命令知识点：储藏</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git stash</span><br><span class="line">$ git stash save <span class="string">&quot;message&quot;</span>  // 建议给每个stash加一个message，用于记录版本</span><br><span class="line">$ git stash -a              // stash当前目录下的所有修改</span><br><span class="line">$ git stash -u              // stash untracked文件</span><br></pre></td></tr></table></figure>
+</article>
+
+<div id="paginator">
+  
+</div>
+
+        </div>
+      </div>
+      <div class="column col-2 hide-lg">
+        <div class="book-post-info">
+  
+    <div class="book-post-meta">
+
+  <div class="author">
+
+    <!-- Author image -->
+    <div class="author-img">
+      
+        <figure
+          class="avatar avatar-lg"
+          data-initial="o"
+          style="background-color: #3b4351;">
+        </figure>
+      
+    </div>
+
+    <!-- Author title -->
+    <div class="author-title">
+      <div>oneone</div>
+      <div>2021-01-15</div>
+    </div>
+  </div>
+
+  
+
+  <div class="divider"></div>
+</div>
+  
+
+  <div class="book-tocbot">
+</div>
+<div class="book-tocbot-menu">
+  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+  <a onclick="go_top()">Back to top</a>
+  <a onclick="go_bottom()">Go to bottom</a>
+</div>
+
+
+<script src="/js/book-toc.js"></script>
+
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+</body>
+</html>
+
+
+<script src="/js/book.js"></script>
