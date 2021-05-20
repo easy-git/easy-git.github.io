@@ -78,16 +78,10 @@
 - [数据统计说明](/about-count)
 
 <script>
-var host = window.location.host;
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  if (host.includes('gitee.io')) {
-    hm.src = "https://hm.baidu.com/hm.js?33e901cc42b01f75e6230c5412711716"; 
-  };
-  if (host.includes('github.io')) {
-    hm.src = "https://hm.baidu.com/hm.js?b558e0d52f3f4260b3c2998fe0907dfa";
-  };
+  hm.src = "https://hm.baidu.com/hm.js?b558e0d52f3f4260b3c2998fe0907dfa";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
