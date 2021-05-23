@@ -57,10 +57,10 @@
 - [用提交信息标注文件中的每一行](/docs/annotate)
 - [查看文件的某个历史版本内容](/docs/fileHistory)
 
-## 身份认证
+## 身份认证及SSH教程
 
+- [SSH Key生成](/auth/ssh-generate)
 - [检查现有 SSH 密钥](/auth/ssh-check)
-- [生成新的 SSH 密钥并配置Git服务器](/auth/ssh-generate)
 - [Git配置多个SSH-Key](/auth/ssh-more)
 - [windows: 记住Git凭据](/auth/http)
 
