@@ -11,9 +11,11 @@ date: 2021-01-06 22:19:35
 
 ### 插件市场导入easy-git插件
 
-从HBuilderX插件市场安装 [easy-git插件地址](https://ext.dcloud.net.cn/plugin?name=easy-git)；
+从HBuilderX插件市场安装 [easy-git插件地址](https://ext.dcloud.net.cn/plugin?name=easy-git)
 
 进入此页面后，点击【使用HBuilderX导入插件】，会自动拉起HBuilderX。
+
+<img src="/static/hx_ext.png" style="border: 1px solid #eee;" />
 
 ### 离线安装zip包
 

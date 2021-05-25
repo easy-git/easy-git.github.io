@@ -1,5 +1,6 @@
 # [赞助](/sponsor)
 # [主页](/)
+# [Git入门](/git)
 # [插件安装](/home/install)
 # [Git工具安装](/home/git-install)
 # [OAuth授权](/oauth)
