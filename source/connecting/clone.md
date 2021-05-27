@@ -37,19 +37,9 @@ date: 2021-01-09 22:19:35
 [Git] 12:33:16.940 克隆成功。本地路径: /opt/test/testgit
 ```
 
-# 克隆过程中可能遇到到错误
+# 克隆错误
 
-### 错误：Permission denied (publickey)
-
-错误:
-
-```
-git@xxxx.com: Permission denied (publickey).
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-```
+### 错误1: Permission denied (publickey)
 
 原因：本地没有 SSH Key文件，或本地的ssh key跟远程git服务器ssh信息不匹配。
 
@@ -57,3 +47,9 @@ and the repository exists.
 
 1. 如果本地没有配置ssh key，请生成SSH密钥，并添加SSH公钥到远程服务器。[SSH key生成教程](/auth/ssh-generate)
 2. windows电脑，如果在easy-git内使用ssh无法克隆成功，请打开`Git Bash`手动克隆仓库。
+
+### 错误2: Incorrect username or password
+
+原因：如果您采用http的方式克隆，如果用户或密码错误，克隆时则会提示：Incorrect username or password
+
+解决方法：输入正确的用户名或密码。
