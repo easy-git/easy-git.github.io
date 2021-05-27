@@ -12,8 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: use Node.js 10.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
     - name: Install Dependencies
-      run: npm install
+      run: | 
+        npm install --save
     - name: Deploy 
-      run: hexo generate
+      run: |
+        ./node_modules/hexo/bin/hexo clean
+        ./node_modules/hexo/bin/hexo generate
