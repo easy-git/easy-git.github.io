@@ -42,8 +42,14 @@ $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 > Enter a file in which to save the key (/Users/you/.ssh/id_ed25519): [Press enter]
 ```
 
+4. 添加到ssh代理
 
-## SSH 密钥添加到 Git服务器
+```bash
+# filepath为您刚才生成的SSH证书路径。
+ssh-add ~/.ssh/<filepath>
+```
+
+## Git服务器设置SSH公钥
 
 - [GitHub 帐户 添加SSH 密钥](https://docs.github.com/cn/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 - [Gitee 码云设置SSH公钥](https://gitee.com/help/articles/4191)

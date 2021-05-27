@@ -63,7 +63,8 @@
 - [SSH Key生成](/auth/ssh-generate)
 - [检查现有 SSH 密钥](/auth/ssh-check)
 - [Git配置多个SSH-Key](/auth/ssh-more)
-- [windows: 记住Git凭据](/auth/http)
+- [Windows SSH设置与启动](/auth/ssh-windows-set)
+- [Windows记住Git凭据](/auth/http)
 
 ## 扩展功能
 
