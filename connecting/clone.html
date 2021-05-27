@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div id="menu" class="book-menu hide">
   <h1><a href="/sponsor">赞助</a></h1>
 <h1><a href="/">主页</a></h1>
+<h1><a href="/git">Git入门</a></h1>
 <h1><a href="/home/install">插件安装</a></h1>
 <h1><a href="/home/git-install">Git工具安装</a></h1>
 <h1><a href="/oauth">OAuth授权</a></h1>
@@ -117,10 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
 <li><a href="/docs/annotate">用提交信息标注文件中的每一行</a></li>
 <li><a href="/docs/fileHistory">查看文件的某个历史版本内容</a></li>
 </ul>
-<h2 id="身份认证">身份认证</h2>
+<h2 id="身份认证及SSH教程">身份认证及SSH教程</h2>
 <ul>
+<li><a href="/auth/ssh-generate">SSH Key生成</a></li>
 <li><a href="/auth/ssh-check">检查现有 SSH 密钥</a></li>
-<li><a href="/auth/ssh-generate">生成新的 SSH 密钥并配置Git服务器</a></li>
 <li><a href="/auth/ssh-more">Git配置多个SSH-Key</a></li>
 <li><a href="/auth/http">windows: 记住Git凭据</a></li>
 </ul>
@@ -141,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?33e901cc42b01f75e6230c5412711716";
+  hm.src = "https://hm.baidu.com/hm.js?b558e0d52f3f4260b3c2998fe0907dfa";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
@@ -213,6 +214,17 @@ function sidebar_toggle() {
 <img src="/static/clone.gif" style="zoom: 50%; border: 1px solid #eee;" />
 <p>点击【开始克隆】，日志如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[Git] 12:33:02.880 开始克隆 testgit&#39;！</span><br><span class="line"></span><br><span class="line">[Git] 12:33:02.901 备注1：克隆进度跟项目大小、网络有关，需要一定时间，请不要重复点击【克隆】按钮。</span><br><span class="line">[Git] 12:33:02.917 备注2：克隆成功后，会自动将克隆项目，加入到HBuilderX项目管理器。如未显示在项目管理器，请手动导入或拖入。</span><br><span class="line"></span><br><span class="line">[Git] 12:33:02.932 Cloning into &#39;&#x2F;opt&#x2F;test&#x2F;testgit&#39;...</span><br><span class="line"></span><br><span class="line">[Git] 12:33:05.350 POST git-upload-pack (gzip 15631 to 7797 bytes)</span><br><span class="line"></span><br><span class="line">[Git] 12:33:06.466 remote: Enumerating objects: 56562, done.        </span><br><span class="line"></span><br><span class="line">[Git] 12:33:06.645 Git clone进度: 0%</span><br><span class="line">[Git] 12:33:06.654 Git clone进度: 20%</span><br><span class="line">[Git] 12:33:09.368 Git clone进度: 25%</span><br><span class="line">[Git] 12:33:12.947 Git clone进度: 37%</span><br><span class="line">[Git] 12:33:15.549 Git clone进度: 90%</span><br><span class="line">[Git] 12:33:15.682 Git clone进度: 99%</span><br><span class="line">[Git] 12:33:15.695 Git clone进度: 100%</span><br><span class="line">[Git] 12:33:15.707 Git clone完成！</span><br><span class="line">[Git] 12:33:15.723 Resolving deltas: 100% (39695&#x2F;39695), done.</span><br><span class="line"></span><br><span class="line">[Git] 12:33:16.940 克隆成功。本地路径: &#x2F;opt&#x2F;test&#x2F;testgit</span><br></pre></td></tr></table></figure>
+<h1>克隆过程中可能遇到到错误</h1>
+<h3 id="错误：Permission-denied-publickey">错误：Permission denied (publickey)</h3>
+<p>错误:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git@xxxx.com: Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
+<p>原因：本地没有 SSH Key文件，或本地的ssh key跟远程git服务器ssh信息不匹配。</p>
+<p>解决方法：</p>
+<ol>
+<li>如果本地没有配置ssh key，请生成SSH密钥，并添加SSH公钥到远程服务器。<a href="/auth/ssh-generate">SSH key生成教程</a></li>
+<li>windows电脑，如果在easy-git内使用ssh无法克隆成功，请打开<code>Git Bash</code>手动克隆仓库。</li>
+</ol>
+
 </article>
 
 <div id="paginator">
