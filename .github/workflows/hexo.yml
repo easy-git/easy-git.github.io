@@ -18,8 +18,8 @@ jobs:
         node-version: 10.x
     - name: Install Dependencies
       run: | 
-        npm install --save
+        npm install hexo-cli -g
     - name: Deploy 
       run: |
-        ./node_modules/hexo/bin/hexo clean
-        ./node_modules/hexo/bin/hexo generate
+        hexo clean
+        hexo generate
