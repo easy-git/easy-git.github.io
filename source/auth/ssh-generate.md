@@ -5,9 +5,13 @@ date: 2021-01-09 22:19:35
 
 # SSH Key生成，并配置Git服务器
 
+* [一键自动生成SSH密钥](#一键自动生成SSH密钥)
+* [手动生成SSH密钥](#手动通过命令行生成SSH密钥)
+
 ## 一键自动生成SSH密钥
 
-> easy-git插件，1.4.6版本，新增了SSH密钥一键自动生成功能。如果easy-git版本，低于1.4.6，请手动在操作系统终端生成。
+> easy-git插件，1.4.6版本，新增了SSH密钥一键自动生成功能。
+> 如果easy-git版本，低于1.4.6，请手动打开`操作系统终端`手动生成。
 
 安装easy-git插件到HBuilderX后，点击菜单【工具】【easy-git】【一键生成SSH KEY】; 或打开命令面板，搜索SSH
 
@@ -18,7 +22,7 @@ date: 2021-01-09 22:19:35
 
 <img src="/static/ssh-keygen.png" style="zoom: 90%;border: 1px solid #eee;" />
 
-## 手动通过命令行生成SSH密钥
+## 手动生成SSH密钥
 
 1. 打开 Terminal（终端）或Git Bash。
 2. 粘贴下面的文本（替换为您的 GitHub 电子邮件地址）。
