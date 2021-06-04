@@ -1,8 +1,8 @@
-# [赞助](/sponsor)
+# [赞助/交流](/sponsor)
 # [主页](/)
-# [Git入门](/git)
-# [插件安装](/home/install)
 # [Git工具安装](/home/git-install)
+# [插件安装](/home/install)
+# [Git入门](/git)
 # [OAuth授权](/oauth)
 ## 插件设置
 
