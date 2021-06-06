@@ -10,15 +10,11 @@ date: 2021-01-16 22:19:35
 
 源代码管理器视图，在【已暂存文件】列表，选中文件，点击`-`号，即可`取消暂存`。
 
-<div style="text-align: center; margin-bottom: 30px;">
-    <img src="/static/cancel_add.png" />
-</div>
+<img src="/static/cancel_add.png" style="margin-bottom: 30px;"/>
 
 ## 取消所有暂存
 
-<div style="text-align: center; margin: 30px 0px;">
-    <img src="/static/cancel_all_add.png" />
-</div>
+<img src="/static/cancel_all_add.png" style="margin: 30px 0px;"/>
 
 
 ## Git 命令：取消暂存

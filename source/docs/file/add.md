@@ -11,9 +11,7 @@ date: 2021-01-09 22:19:35
 - 在【更改】列表，选中文件，点击`+`号，即可将文件`加入`暂存区；
 - 在【更改】列表，选中文件，点击`-`号，即可`撤销`文件修改。
 
-<div style="text-align: center;">
-    <img src="/static/add.gif" />
-</div>
+<img src="/static/add.gif" />
 
 Git 命令扩展：
 

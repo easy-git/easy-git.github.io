@@ -8,9 +8,8 @@ date: 2021-01-16 22:19:35
 
 源代码管理器视图，【更改】列表
 
-<div style="text-align: center; margin-bottom: 30px;">
-    <img src="/static/cancel_change.png" />
-</div>
+
+<img src="/static/cancel_change.png" style="margin-bottom: 30px;"/>
 
 
 ## Git 命令：撤销修改

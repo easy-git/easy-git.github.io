@@ -8,18 +8,23 @@ Git pull: 从远端仓库中抓取数据，合并到工作目录中的当前分�
 
 easy-git插件中，执行pull操作的方式：
 
-- 源代码管理器视图，点击底部的`下箭头 ↓`。
+- 源代码管理器视图，点击底部的`下箭头 ↓`。注意：此处运行的git命令为：`git pull --rebase`
 - 命令面板，输入`pull`。 [关于命令面板](/CommandPanel)
 
-## 源代码管理器
+## 命令面板
 
-在easy-git 源代码管理器视图，点击底部的`下箭头 ↓`，即可从远端抓取数据。
+easy-git插件，命令面板，提供了关于pull的各种选项操作，
 
-注意：此处运行的git命令为：`git pull --rebase`
+- git pull
+- git pull --rebase
+- git pull --rebase --autostash
 
-## git pull和git pull --rebase的区别
+如下截图：
 
-使用下面的关系区别这两个操作：
+<img src="/static/commandpanel-pull.png" style="border: 1px solid #eee;" />
+
+
+> 使用下面的关系，简单的说明下 git pull和git pull --rebase的区别：
 
 ```
 git pull = git fetch + git merge

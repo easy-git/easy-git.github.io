@@ -6,9 +6,7 @@ date: 2021-01-09 22:19:35
 
 ## 初始化
 
-HBuilderX项目管理器，选中某个项目，右键菜单，点击【初始化存储库】
-
-<img src="/static/init.png" style="zoom: 60%; border: 1px solid #eee;"/>
+HBuilderX项目管理器，选中某个项目(非Git项目)，右键菜单，点击【初始化存储库】
 
 ## 关联仓库地址
 
