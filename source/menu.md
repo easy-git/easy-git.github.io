@@ -74,6 +74,7 @@
 
 - [Q1: 中文乱码问题](/question/quote)
 - [Q2: 身份认证问题](/question/username)
+- [Q3：Permission denied (publickey)](/question/Permission_denied_publickey)
 
 ## 其它
 

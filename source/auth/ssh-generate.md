@@ -18,7 +18,7 @@ date: 2021-01-09 22:19:35
 1. SSH Key生成工具，调用的是ssh-keygen命令，支持四种算法，如果不确定使用哪种，默认即可。
 2. 生成的ssh key存储在`~/.ssh/`目录下。
 3. SSH Key用途默认不勾选，如果您是用于Git服务器，强烈建议勾选，并提供Git域名，以方便添加到`~/.ssh/config`中。如果您不了解`~/.ssh/config`，请自行搜索相关知识，这是一个很有用的配置。
-4. 生成成功后，会自动执行ssh-add将新生成的密钥添加到ssh-agent中。
+4. 生成成功后，同时也会自动执行ssh-add将新生成的密钥添加到ssh-agent中。
 
 <img src="/static/ssh-keygen.png" style="zoom: 90%;border: 1px solid #eee;" />
 
@@ -42,11 +42,22 @@ $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 > Enter a file in which to save the key (/Users/you/.ssh/id_ed25519): [Press enter]
 ```
 
-4. 添加到ssh代理
+4. 添加到ssh代理或配置`~/.ssh/config`
 
 ```bash
 # filepath为您刚才生成的SSH证书路径。
 ssh-add ~/.ssh/<filepath>
+```
+
+```bash
+# 编辑ssh/config文件
+vi ~/.ssh/config
+
+# 输入如下内容 (以Github为例)
+Host github
+	HostName github.com
+	PreferredAuthentications publickey
+	IdentityFile <ssh私钥文件绝对路径>
 ```
 
 ## Git服务器设置SSH公钥
