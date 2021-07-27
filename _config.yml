@@ -103,5 +103,7 @@ theme: book
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:easy-git/easy-git.github.io.git
+  branch: master
 
