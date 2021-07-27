@@ -48,7 +48,5 @@ jobs:
         hexo deploy
     - name: Deploy # step4
       run: |
-        git symbolic-ref HEAD refs/heads/gh-pages
-        git add -f *
-        git commit -m "update"
-        git push --force origin gh-pages
+        git subtree add --prefix=public gh-pages gh-pages --squash
+        git subtree push --prefix=public origin gh-pages --squash
