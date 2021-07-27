@@ -58,11 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
   </a>
 </div>
     <div id="menu" class="book-menu hide">
-  <h1><a href="/sponsor">赞助</a></h1>
+  <h1><a href="/sponsor">赞助/交流</a></h1>
 <h1><a href="/">主页</a></h1>
-<h1><a href="/git">Git入门</a></h1>
-<h1><a href="/home/install">插件安装</a></h1>
 <h1><a href="/home/git-install">Git工具安装</a></h1>
+<h1><a href="/home/install">插件安装</a></h1>
+<h1><a href="/git">Git入门</a></h1>
 <h1><a href="/oauth">OAuth授权</a></h1>
 <h2 id="插件设置">插件设置</h2>
 <ul>
@@ -123,7 +123,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <li><a href="/auth/ssh-generate">SSH Key生成</a></li>
 <li><a href="/auth/ssh-check">检查现有 SSH 密钥</a></li>
 <li><a href="/auth/ssh-more">Git配置多个SSH-Key</a></li>
-<li><a href="/auth/http">windows: 记住Git凭据</a></li>
+<li><a href="/auth/ssh-windows-set">Windows SSH设置与启动</a></li>
+<li><a href="/auth/http">Windows记住Git凭据</a></li>
 </ul>
 <h2 id="扩展功能">扩展功能</h2>
 <ul>
@@ -133,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <ul>
 <li><a href="/question/quote">Q1: 中文乱码问题</a></li>
 <li><a href="/question/username">Q2: 身份认证问题</a></li>
+<li><a href="/question/Permission_denied_publickey">Q3：Permission denied (publickey)</a></li>
 </ul>
 <h2 id="其它">其它</h2>
 <ul>
@@ -209,21 +211,42 @@ function sidebar_toggle() {
 <ol>
 <li>HBuilderX 安装好EasyGit插件后，点击菜单【工具】【Git:克隆仓库】，即可打开视图界面。</li>
 <li>输入<code>仓库地址</code>，点击【开始克隆】按钮。</li>
-<li>注意：私有仓库，需要提供身份认证信息(比如<code>密码</code>或<code>SSH公钥</code>)，才能克隆。</li>
+<li>https方式克隆，如果是私有仓库，需要提供身份认证信息(比如<code>密码</code>)，才能克隆。</li>
+<li>SSH方法克隆，请参考本文第二章节。</li>
 </ol>
 <img src="/static/clone.gif" style="zoom: 50%; border: 1px solid #eee;" />
 <p>点击【开始克隆】，日志如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[Git] 12:33:02.880 开始克隆 testgit&#39;！</span><br><span class="line"></span><br><span class="line">[Git] 12:33:02.901 备注1：克隆进度跟项目大小、网络有关，需要一定时间，请不要重复点击【克隆】按钮。</span><br><span class="line">[Git] 12:33:02.917 备注2：克隆成功后，会自动将克隆项目，加入到HBuilderX项目管理器。如未显示在项目管理器，请手动导入或拖入。</span><br><span class="line"></span><br><span class="line">[Git] 12:33:02.932 Cloning into &#39;&#x2F;opt&#x2F;test&#x2F;testgit&#39;...</span><br><span class="line"></span><br><span class="line">[Git] 12:33:05.350 POST git-upload-pack (gzip 15631 to 7797 bytes)</span><br><span class="line"></span><br><span class="line">[Git] 12:33:06.466 remote: Enumerating objects: 56562, done.        </span><br><span class="line"></span><br><span class="line">[Git] 12:33:06.645 Git clone进度: 0%</span><br><span class="line">[Git] 12:33:06.654 Git clone进度: 20%</span><br><span class="line">[Git] 12:33:09.368 Git clone进度: 25%</span><br><span class="line">[Git] 12:33:12.947 Git clone进度: 37%</span><br><span class="line">[Git] 12:33:15.549 Git clone进度: 90%</span><br><span class="line">[Git] 12:33:15.682 Git clone进度: 99%</span><br><span class="line">[Git] 12:33:15.695 Git clone进度: 100%</span><br><span class="line">[Git] 12:33:15.707 Git clone完成！</span><br><span class="line">[Git] 12:33:15.723 Resolving deltas: 100% (39695&#x2F;39695), done.</span><br><span class="line"></span><br><span class="line">[Git] 12:33:16.940 克隆成功。本地路径: &#x2F;opt&#x2F;test&#x2F;testgit</span><br></pre></td></tr></table></figure>
-<h1>克隆过程中可能遇到到错误</h1>
-<h3 id="错误：Permission-denied-publickey">错误：Permission denied (publickey)</h3>
-<p>错误:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git@xxxx.com: Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[Git] 12:33:02.880 开始克隆 testgit&#39;！</span><br><span class="line"></span><br><span class="line">[Git] 12:33:02.901 备注1：克隆进度跟项目大小、网络有关，需要一定时间，请不要重复点击【克隆】按钮。</span><br><span class="line">[Git] 12:33:02.917 备注2：克隆成功后，会自动将克隆项目，加入到HBuilderX项目管理器。如未显示在项目管理器，请手动导入或拖入。</span><br><span class="line"></span><br><span class="line">[Git] 12:33:02.932 Cloning into &#39;&#x2F;opt&#x2F;test&#x2F;testgit&#39;...     </span><br><span class="line"></span><br><span class="line">[Git] 12:33:06.645 Git clone进度: 0%</span><br><span class="line">[Git] 12:33:06.654 Git clone进度: 20%</span><br><span class="line">[Git] 12:33:15.682 Git clone进度: 99%</span><br><span class="line">[Git] 12:33:15.695 Git clone进度: 100%</span><br><span class="line">[Git] 12:33:15.707 Git clone完成！</span><br><span class="line">[Git] 12:33:15.723 Resolving deltas: 100% (39695&#x2F;39695), done.</span><br><span class="line"></span><br><span class="line">[Git] 12:33:16.940 克隆成功。本地路径: &#x2F;opt&#x2F;test&#x2F;testgit</span><br></pre></td></tr></table></figure>
+<h1>ssh_clone</h1>
+<p>使用SSH克隆存储库之前，应确认已检查以下步骤：</p>
+<ul>
+<li>您本地已生成SSH密钥，如果未生成，请先生成SSH密钥。<a href="/auth/ssh-generate">生成教程</a></li>
+<li>已将SSH密钥添加到您的Git帐户。<a href="/auth/ssh-generate#Git%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AESSH%E5%85%AC%E9%92%A5">设置教程</a></li>
+<li>已启动SSH-Agent（适用于Windows用户；MacOSX用户不需要考虑）<a href="/auth/ssh-windows-set">教程</a></li>
+<li>已将密钥添加到SSH代理（适用于Windows用户；MacOSX用户不需要考虑）<a href="/auth/ssh-windows-set">教程</a></li>
+</ul>
+<blockquote>
+<p>MacOSX默认包含SSH-Agent，如果您是通过<a href="/auth/ssh-generate">SSH一键生成工具</a>生成的密钥，则无需任何额外的工作；否则您需要手动运行ssh-add添加SSH密钥，只需要执行一次。</p>
+<p>Windows需要则需要额外执行一些步骤，<a href="/auth/ssh-windows-set">参考</a></p>
+</blockquote>
+<p>特别注意：</p>
+<ol>
+<li>如果上述操作进行后，SSH克隆仍失败，请在操作系统终端，自行运行克隆命令。</li>
+<li>windows电脑，SSH克隆非常麻烦，使用easy-git克隆失败的可能性非常大，请启动<code>Git Bash</code>进行克隆。</li>
+</ol>
+<p>克隆命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;url&gt;</span><br></pre></td></tr></table></figure>
+<h1>克隆错误</h1>
+<h3 id="错误1-Permission-denied-publickey">错误1: Permission denied (publickey)</h3>
 <p>原因：本地没有 SSH Key文件，或本地的ssh key跟远程git服务器ssh信息不匹配。</p>
 <p>解决方法：</p>
 <ol>
 <li>如果本地没有配置ssh key，请生成SSH密钥，并添加SSH公钥到远程服务器。<a href="/auth/ssh-generate">SSH key生成教程</a></li>
 <li>windows电脑，如果在easy-git内使用ssh无法克隆成功，请打开<code>Git Bash</code>手动克隆仓库。</li>
 </ol>
+<h3 id="错误2-Incorrect-username-or-password">错误2: Incorrect username or password</h3>
+<p>原因：如果您采用http的方式克隆，如果用户或密码错误，克隆时则会提示：Incorrect username or password</p>
+<p>解决方法：输入正确的用户名或密码。</p>
 
 </article>
 

@@ -58,11 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
   </a>
 </div>
     <div id="menu" class="book-menu hide">
-  <h1><a href="/sponsor">赞助</a></h1>
+  <h1><a href="/sponsor">赞助/交流</a></h1>
 <h1><a href="/">主页</a></h1>
-<h1><a href="/git">Git入门</a></h1>
-<h1><a href="/home/install">插件安装</a></h1>
 <h1><a href="/home/git-install">Git工具安装</a></h1>
+<h1><a href="/home/install">插件安装</a></h1>
+<h1><a href="/git">Git入门</a></h1>
 <h1><a href="/oauth">OAuth授权</a></h1>
 <h2 id="插件设置">插件设置</h2>
 <ul>
@@ -123,7 +123,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <li><a href="/auth/ssh-generate">SSH Key生成</a></li>
 <li><a href="/auth/ssh-check">检查现有 SSH 密钥</a></li>
 <li><a href="/auth/ssh-more">Git配置多个SSH-Key</a></li>
-<li><a href="/auth/http">windows: 记住Git凭据</a></li>
+<li><a href="/auth/ssh-windows-set">Windows SSH设置与启动</a></li>
+<li><a href="/auth/http">Windows记住Git凭据</a></li>
 </ul>
 <h2 id="扩展功能">扩展功能</h2>
 <ul>
@@ -133,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <ul>
 <li><a href="/question/quote">Q1: 中文乱码问题</a></li>
 <li><a href="/question/username">Q2: 身份认证问题</a></li>
+<li><a href="/question/Permission_denied_publickey">Q3：Permission denied (publickey)</a></li>
 </ul>
 <h2 id="其它">其它</h2>
 <ul>
@@ -206,6 +208,10 @@ function sidebar_toggle() {
 <article id="page">
   <h1></h1>
   <h1>OAuth授权认证</h1>
+<blockquote>
+<p><code>特别注意</code>：oauth授权操作，仅限用于操作github或gitee本身的api，比如获取仓库列表、创建远程仓库等。</p>
+<p>它<code>不能</code>用于git push、git pull等操作，git push等操作还是需要<code>提供账号密码</code>。</p>
+</blockquote>
 <p>授权easy-git获取Github、gitee等<code>git托管服务器</code>访问凭证后，您可以在HBuilderX内，通过easy-git使用远程Git服务器某些功能，比如创建远程仓库、读取远程仓库列表，而无需再登录浏览器，操作更便捷。</p>
 <p>比如：克隆操作，之前您首先需要拷贝仓库地址，拷贝的操作（打开浏览器、打开github、找到仓库、拷贝url），授权后，您就可以省略这些步骤。</p>
 <p>授权后<code>访问凭证</code>仅会存储在您的个人电脑上，<code>不会上传网络</code>，也不会在网络上保存您的任何信息，它们仅保存在您的个人电脑上，且已<code>加密</code>。</p>
@@ -252,7 +258,7 @@ function sidebar_toggle() {
     <!-- Author title -->
     <div class="author-title">
       <div>oneone</div>
-      <div>2021-05-18</div>
+      <div>2021-07-27</div>
     </div>
   </div>
 
