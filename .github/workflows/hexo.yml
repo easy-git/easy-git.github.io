@@ -48,6 +48,7 @@ jobs:
         hexo deploy
     - name: Deploy # step4
       id: deploy
-      uses: sma11black/hexo-action@v1.0.0
+      uses: noosphere-coder/hexo-action@master
       with:
         deploy_key: ${{ secrets.ACCESS_TOKEN }}
+        commit_msg: ${{ github.event.head_commit.message }}
