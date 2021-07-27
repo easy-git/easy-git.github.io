@@ -49,6 +49,6 @@ jobs:
     - name: Deploy # step4
       run: |
         git symbolic-ref HEAD refs/heads/gh-pages
-        git add -f *
+        git -f add *
         git commit -m "update"
         git push origin gh-pages
