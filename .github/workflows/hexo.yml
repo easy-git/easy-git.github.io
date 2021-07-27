@@ -46,7 +46,7 @@ jobs:
         hexo clean
         hexo generate 
         hexo deploy
-    - name: Build and Deploy
-      run: |
-        git pull
-        git subtree push --prefix=public origin gh-pages
+#     - name: Build and Deploy
+#       run: |
+#         git pull
+#         git subtree push --prefix=public origin gh-pages
