@@ -48,5 +48,4 @@ jobs:
         hexo deploy
     - name: Deploy # step4
       run: |
-        git subtree add --prefix=public gh-pages gh-pages --squash
         git subtree push --prefix=public origin gh-pages --squash
