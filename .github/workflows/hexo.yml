@@ -47,8 +47,8 @@ jobs:
         hexo generate 
         hexo deploy
     - name: Build and Deploy
-        env: |
-            PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-            PUBLISH_REPOSITORY: easy-git/easy-git.github.io
-            BRANCH: master
-            PUBLISH_DIR: ./public
+      env: |
+        PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        PUBLISH_REPOSITORY: easy-git/easy-git.github.io
+        BRANCH: master
+        PUBLISH_DIR: ./public
