@@ -58,11 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
   </a>
 </div>
     <div id="menu" class="book-menu hide">
-  <h1><a href="/sponsor">赞助</a></h1>
+  <h1><a href="/sponsor">赞助/交流</a></h1>
 <h1><a href="/">主页</a></h1>
-<h1><a href="/git">Git入门</a></h1>
-<h1><a href="/home/install">插件安装</a></h1>
 <h1><a href="/home/git-install">Git工具安装</a></h1>
+<h1><a href="/home/install">插件安装</a></h1>
+<h1><a href="/git">Git入门</a></h1>
 <h1><a href="/oauth">OAuth授权</a></h1>
 <h2 id="插件设置">插件设置</h2>
 <ul>
@@ -123,7 +123,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <li><a href="/auth/ssh-generate">SSH Key生成</a></li>
 <li><a href="/auth/ssh-check">检查现有 SSH 密钥</a></li>
 <li><a href="/auth/ssh-more">Git配置多个SSH-Key</a></li>
-<li><a href="/auth/http">windows: 记住Git凭据</a></li>
+<li><a href="/auth/ssh-windows-set">Windows SSH设置与启动</a></li>
+<li><a href="/auth/http">Windows记住Git凭据</a></li>
 </ul>
 <h2 id="扩展功能">扩展功能</h2>
 <ul>
@@ -133,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <ul>
 <li><a href="/question/quote">Q1: 中文乱码问题</a></li>
 <li><a href="/question/username">Q2: 身份认证问题</a></li>
+<li><a href="/question/Permission_denied_publickey">Q3：Permission denied (publickey)</a></li>
 </ul>
 <h2 id="其它">其它</h2>
 <ul>
@@ -209,7 +211,7 @@ function sidebar_toggle() {
 <blockquote>
 <p>如果您的电脑已安装Git命令行工具，请跳过本章。</p>
 </blockquote>
-<p>easy-git插件，运行是调用的git命令，请确保电脑已安装git工具。</p>
+<p>easy-git插件，本质是调用的git命令，请确保电脑已安装git工具。</p>
 <h2 id="Windows">Windows</h2>
 <p>Windows需要电脑本机安装git-bash，<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git Bash下载地址</a></p>
 <blockquote>
@@ -225,6 +227,20 @@ function sidebar_toggle() {
 <p>安装命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;HEAD&#x2F;install.sh)&quot;</span><br><span class="line"></span><br><span class="line">brew install git</span><br></pre></td></tr></table></figure>
 <p>如果brew因网络问题安装失败，请参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/06a9a59e7040">详情</a></p>
+<h2 id="问题排查">问题排查</h2>
+<blockquote>
+<p>再次说明，easy-git插件，本质是调用的git命令，请确保电脑已安装git工具。</p>
+</blockquote>
+<p>打开<code>操作系统终端命令行</code>软件，输入<code>git --version</code>, 检查下命令是否存在。</p>
+<p>如果终端出现下列错误，则说明git<code>没有</code>安装成功。</p>
+<ul>
+<li>错误1： <code>'git' 不是内部或外部命令，也不是可运行的程序或批处理文件。</code></li>
+<li>错误2：<code>git: command not found</code></li>
+</ul>
+<blockquote>
+<p>特别注意：windows电脑，如果您确定已成功安装Git安装包，但是命令行还是出现上面的错误，请将git安装目录加入到系统环境变量。</p>
+</blockquote>
+<p>如果您还无法解决问题，请加入QQ交流群寻求帮助: 623513298 <a target="_blank" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=QRbb77rmIhpsh8OthaftVWfYZQdBr_Ir&amp;jump_from=webapi">点击加入</a></p>
 
 </article>
 
@@ -255,7 +271,7 @@ function sidebar_toggle() {
     <!-- Author title -->
     <div class="author-title">
       <div>oneone</div>
-      <div>2021-05-25</div>
+      <div>2021-07-27</div>
     </div>
   </div>
 

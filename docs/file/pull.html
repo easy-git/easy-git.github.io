@@ -58,11 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
   </a>
 </div>
     <div id="menu" class="book-menu hide">
-  <h1><a href="/sponsor">赞助</a></h1>
+  <h1><a href="/sponsor">赞助/交流</a></h1>
 <h1><a href="/">主页</a></h1>
-<h1><a href="/git">Git入门</a></h1>
-<h1><a href="/home/install">插件安装</a></h1>
 <h1><a href="/home/git-install">Git工具安装</a></h1>
+<h1><a href="/home/install">插件安装</a></h1>
+<h1><a href="/git">Git入门</a></h1>
 <h1><a href="/oauth">OAuth授权</a></h1>
 <h2 id="插件设置">插件设置</h2>
 <ul>
@@ -123,7 +123,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <li><a href="/auth/ssh-generate">SSH Key生成</a></li>
 <li><a href="/auth/ssh-check">检查现有 SSH 密钥</a></li>
 <li><a href="/auth/ssh-more">Git配置多个SSH-Key</a></li>
-<li><a href="/auth/http">windows: 记住Git凭据</a></li>
+<li><a href="/auth/ssh-windows-set">Windows SSH设置与启动</a></li>
+<li><a href="/auth/http">Windows记住Git凭据</a></li>
 </ul>
 <h2 id="扩展功能">扩展功能</h2>
 <ul>
@@ -133,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <ul>
 <li><a href="/question/quote">Q1: 中文乱码问题</a></li>
 <li><a href="/question/username">Q2: 身份认证问题</a></li>
+<li><a href="/question/Permission_denied_publickey">Q3：Permission denied (publickey)</a></li>
 </ul>
 <h2 id="其它">其它</h2>
 <ul>
@@ -209,14 +211,21 @@ function sidebar_toggle() {
 <p>Git pull: 从远端仓库中抓取数据，合并到工作目录中的当前分支。</p>
 <p>easy-git插件中，执行pull操作的方式：</p>
 <ul>
-<li>源代码管理器视图，点击底部的<code>下箭头 ↓</code>。</li>
+<li>源代码管理器视图，点击底部的<code>下箭头 ↓</code>。注意：此处运行的git命令为：<code>git pull --rebase</code></li>
 <li>命令面板，输入<code>pull</code>。 <a href="/CommandPanel">关于命令面板</a></li>
 </ul>
-<h2 id="源代码管理器">源代码管理器</h2>
-<p>在easy-git 源代码管理器视图，点击底部的<code>下箭头 ↓</code>，即可从远端抓取数据。</p>
-<p>注意：此处运行的git命令为：<code>git pull --rebase</code></p>
-<h2 id="git-pull和git-pull-rebase的区别">git pull和git pull --rebase的区别</h2>
-<p>使用下面的关系区别这两个操作：</p>
+<h2 id="命令面板">命令面板</h2>
+<p>easy-git插件，命令面板，提供了关于pull的各种选项操作，</p>
+<ul>
+<li>git pull</li>
+<li>git pull --rebase</li>
+<li>git pull --rebase --autostash</li>
+</ul>
+<p>如下截图：</p>
+<img src="/static/commandpanel-pull.png" style="border: 1px solid #eee;" />
+<blockquote>
+<p>使用下面的关系，简单的说明下 git pull和git pull --rebase的区别：</p>
+</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull &#x3D; git fetch + git merge</span><br><span class="line">git pull --rebase &#x3D; git fetch + git rebase</span><br></pre></td></tr></table></figure>
 </article>
 

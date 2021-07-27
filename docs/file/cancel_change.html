@@ -58,11 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
   </a>
 </div>
     <div id="menu" class="book-menu hide">
-  <h1><a href="/sponsor">赞助</a></h1>
+  <h1><a href="/sponsor">赞助/交流</a></h1>
 <h1><a href="/">主页</a></h1>
-<h1><a href="/git">Git入门</a></h1>
-<h1><a href="/home/install">插件安装</a></h1>
 <h1><a href="/home/git-install">Git工具安装</a></h1>
+<h1><a href="/home/install">插件安装</a></h1>
+<h1><a href="/git">Git入门</a></h1>
 <h1><a href="/oauth">OAuth授权</a></h1>
 <h2 id="插件设置">插件设置</h2>
 <ul>
@@ -123,7 +123,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <li><a href="/auth/ssh-generate">SSH Key生成</a></li>
 <li><a href="/auth/ssh-check">检查现有 SSH 密钥</a></li>
 <li><a href="/auth/ssh-more">Git配置多个SSH-Key</a></li>
-<li><a href="/auth/http">windows: 记住Git凭据</a></li>
+<li><a href="/auth/ssh-windows-set">Windows SSH设置与启动</a></li>
+<li><a href="/auth/http">Windows记住Git凭据</a></li>
 </ul>
 <h2 id="扩展功能">扩展功能</h2>
 <ul>
@@ -133,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <ul>
 <li><a href="/question/quote">Q1: 中文乱码问题</a></li>
 <li><a href="/question/username">Q2: 身份认证问题</a></li>
+<li><a href="/question/Permission_denied_publickey">Q3：Permission denied (publickey)</a></li>
 </ul>
 <h2 id="其它">其它</h2>
 <ul>
@@ -208,9 +210,7 @@ function sidebar_toggle() {
   <h1>撤销修改</h1>
 <p>如何从工作区撤销文件修改？</p>
 <p>源代码管理器视图，【更改】列表</p>
-<div style="text-align: center; margin-bottom: 30px;">
-    <img src="/static/cancel_change.png" />
-</div>
+<img src="/static/cancel_change.png" style="margin-bottom: 30px;"/>
 <h2 id="Git-命令：撤销修改">Git 命令：撤销修改</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git restore &lt;file&gt;         // 撤销指定文件</span><br><span class="line">$ git restore &lt;dirname&gt;/     // 撤销指定目录下，所有文件修改</span><br><span class="line">$ git restore：/             // 撤销工作区所有文件修改</span><br><span class="line">$ git restore .              // 撤销当前目录所有修改</span><br><span class="line">$ git restore *              // 撤销当前目录所有修改</span><br><span class="line">$ git restore *.js           // 撤销指定后缀的文件，比如js</span><br><span class="line"></span><br><span class="line">$ git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
 <p>备注：<code>git checkout</code>和<code>git restore</code>都可以实现从工作区撤销修改的功能。但是，不推荐使用<code>git checkout</code></p>

@@ -58,11 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
   </a>
 </div>
     <div id="menu" class="book-menu hide">
-  <h1><a href="/sponsor">赞助</a></h1>
+  <h1><a href="/sponsor">赞助/交流</a></h1>
 <h1><a href="/">主页</a></h1>
-<h1><a href="/git">Git入门</a></h1>
-<h1><a href="/home/install">插件安装</a></h1>
 <h1><a href="/home/git-install">Git工具安装</a></h1>
+<h1><a href="/home/install">插件安装</a></h1>
+<h1><a href="/git">Git入门</a></h1>
 <h1><a href="/oauth">OAuth授权</a></h1>
 <h2 id="插件设置">插件设置</h2>
 <ul>
@@ -123,7 +123,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <li><a href="/auth/ssh-generate">SSH Key生成</a></li>
 <li><a href="/auth/ssh-check">检查现有 SSH 密钥</a></li>
 <li><a href="/auth/ssh-more">Git配置多个SSH-Key</a></li>
-<li><a href="/auth/http">windows: 记住Git凭据</a></li>
+<li><a href="/auth/ssh-windows-set">Windows SSH设置与启动</a></li>
+<li><a href="/auth/http">Windows记住Git凭据</a></li>
 </ul>
 <h2 id="扩展功能">扩展功能</h2>
 <ul>
@@ -133,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <ul>
 <li><a href="/question/quote">Q1: 中文乱码问题</a></li>
 <li><a href="/question/username">Q2: 身份认证问题</a></li>
+<li><a href="/question/Permission_denied_publickey">Q3：Permission denied (publickey)</a></li>
 </ul>
 <h2 id="其它">其它</h2>
 <ul>
@@ -209,13 +211,9 @@ function sidebar_toggle() {
 <p>如何操作<code>暂存区</code>和<code>工作目录中</code>已修改的文件？</p>
 <p>例如，你已经修改了两个文件并且想要将它们作为两次独立的修改提交， 但是却意外地输入暂存了它们两个。如何只取消暂存两个中的一个呢？</p>
 <p>源代码管理器视图，在【已暂存文件】列表，选中文件，点击<code>-</code>号，即可<code>取消暂存</code>。</p>
-<div style="text-align: center; margin-bottom: 30px;">
-    <img src="/static/cancel_add.png" />
-</div>
+<img src="/static/cancel_add.png" style="margin-bottom: 30px;"/>
 <h2 id="取消所有暂存">取消所有暂存</h2>
-<div style="text-align: center; margin: 30px 0px;">
-    <img src="/static/cancel_all_add.png" />
-</div>
+<img src="/static/cancel_all_add.png" style="margin: 30px 0px;"/>
 <h2 id="Git-命令：取消暂存">Git 命令：取消暂存</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git restore --staged &lt;file&gt;</span><br><span class="line">$ git restore --staged *            // 取消所有暂存</span><br></pre></td></tr></table></figure>
 </article>
