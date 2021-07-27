@@ -47,6 +47,7 @@ jobs:
         hexo generate 
         hexo deploy
     - name: Build and Deploy
+      uses: y4code/hexo-deploy-action@master
       env: |
         PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         PUBLISH_REPOSITORY: easy-git/easy-git.github.io
