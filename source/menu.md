@@ -10,6 +10,7 @@
 - [设置快捷键](/setting/keyboard)
 - [语音提示](/setting/voice)
 - [自动刷新](/setting/autoRefresh)
+- [自定义Git视图颜色](/setting/theme)
 
 ## Git 克隆/连接
 
