@@ -205,29 +205,49 @@ function sidebar_toggle() {
 
         </div>
         <div class="book-content">
-          <div class="book-post">
-  <h1>easy-git</h1>
-<p>easy-git, 是基于HBuilderX API开发的可视化图形Git插件，界面参考vscode源代码管理器。</p>
-<p>easy-git, 支持连接Github、gitee账号，支持搜索github，支持命令面板，支持克隆、提交/更新/拉取、分支/tag管理、日志、文件对比、储藏等操作。</p>
-<img src="/static/intro.gif" style="border: 1px solid #eee;" />
-<h2 id="交流">交流</h2>
-<p>为了更好的互动，2021-06-04日，新建插件QQ交流群，大家可以加群反馈问题或提交需求。</p>
-<p>QQ交流群: 623513298 <a target="_blank" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=QRbb77rmIhpsh8OthaftVWfYZQdBr_Ir&amp;jump_from=webapi">点击加入</a></p>
+          
+<article id="page">
+  <h1></h1>
+  <h1>SSH Windows设置</h1>
+<blockquote>
+<p>本文仅适用于windows.</p>
+</blockquote>
+<p>使用SSH克隆存储库之前，应确认已检查以下步骤：</p>
+<ul>
+<li>您本地已生成SSH密钥，如果未生成，请先生成SSH密钥。<a href="/auth/ssh-generate">生成教程</a></li>
+<li>已将SSH密钥添加到您的Git帐户。<a href="/auth/ssh-generate#Git%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AESSH%E5%85%AC%E9%92%A5">设置教程</a></li>
+<li>已启动SSH-Agent（适用于Windows用户，MacOSX用户不需要考虑）<a href="/auth/ssh-windows-set">教程</a></li>
+<li>已将密钥添加到SSH代理（适用于Windows用户，MacOSX用户不需要考虑）<a href="/auth/ssh-windows-set">教程</a></li>
+</ul>
+<h2 id="启动SSH-Agent，并添加到SSH代理">启动SSH-Agent，并添加到SSH代理</h2>
+<blockquote>
+<p>本章节仅适用于windows。</p>
+</blockquote>
+<ol>
+<li>首先，打开<code>Git Bash</code>，注意名称，不是cmd也不是powershell</li>
+<li>启动ssh-agent</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval “$(ssh-agent -s)”</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>添加SSH代码，即执行ssh-add</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># id_rsa是证书文件名称，这里以id_rsa举例</span><br><span class="line">ssh-add ~&#x2F;.ssh&#x2F;id_rsa</span><br></pre></td></tr></table></figure>
+<h2 id="知识点">知识点</h2>
+<p>上面的文章，频繁的提到一个词 <code>SSH-Agent</code>, 那么什么是SSH-Agent？</p>
+<p>ssh-Agent ，意为 ssh 代理，是一个密钥管理器，用来管理一个多个密钥，并为其他需要使用 ssh key 的程序提供代理。</p>
+<p>SSH是一个允许两台电脑之间通过安全的连接进行数据交换的 网络协议。通过加密保证了数据的保密性和完整性。SSH采用 公钥 加密技术来验证远程主机，以及 (必要时) 允许远程主机验证用户。</p>
+<p>而为了让其他程序更方便的使用这套加密技术，就有了 ssh agent。</p>
+<p>当把私钥交给 ssh agent 管理的好处：</p>
+<ul>
+<li>当 其他程序 需要身份验证的时候 可以将验证申请交给 ssh-agent 来完成整个认证过程。使用不同的密钥连接到不同的主机时，需要要手动指定对应的密钥，而ssh代理可以自动帮助我们选择对应的密钥进行认证。</li>
+<li>避免重复输入密码：如果您的私钥使用密码短语来加密了的话，每一次使用 SSH 密钥对进行登录的时候，您都必须输入正确的密码短语。而 SSH agent 程序能够将您的已解密的私钥缓存起来，在需要的时候提供给您的 SSH 客户端。这样子，您就只需要在使用 ssh-add 时将私钥加入 SSH agent 缓存的时候，输入一次密码短语就可以了。这为经常使用 SSH 连接用户提供了不少便利。</li>
+</ul>
 
+</article>
+
+<div id="paginator">
+  
 </div>
-
-
-  <div class="book-comments">
-    
-
-
-
-
-  </div>
-
-
-
-<script src="/js/book-post.js"></script>
 
         </div>
       </div>
@@ -252,7 +272,7 @@ function sidebar_toggle() {
     <!-- Author title -->
     <div class="author-title">
       <div>oneone</div>
-      <div>2021-01-06</div>
+      <div>2022-03-28</div>
     </div>
   </div>
 

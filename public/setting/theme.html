@@ -205,29 +205,26 @@ function sidebar_toggle() {
 
         </div>
         <div class="book-content">
-          <div class="book-post">
-  <h1>easy-git</h1>
-<p>easy-git, 是基于HBuilderX API开发的可视化图形Git插件，界面参考vscode源代码管理器。</p>
-<p>easy-git, 支持连接Github、gitee账号，支持搜索github，支持命令面板，支持克隆、提交/更新/拉取、分支/tag管理、日志、文件对比、储藏等操作。</p>
-<img src="/static/intro.gif" style="border: 1px solid #eee;" />
-<h2 id="交流">交流</h2>
-<p>为了更好的互动，2021-06-04日，新建插件QQ交流群，大家可以加群反馈问题或提交需求。</p>
-<p>QQ交流群: 623513298 <a target="_blank" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=QRbb77rmIhpsh8OthaftVWfYZQdBr_Ir&amp;jump_from=webapi">点击加入</a></p>
+          
+<article id="page">
+  <h1></h1>
+  <h1>自定义主题</h1>
+<p>EasyGit, 已经适配HBuilderX 绿柔、酷黑、雅蓝主题。</p>
+<p>同时，支持<a target="_blank" rel="noopener" href="https://hx.dcloud.net.cn/Tutorial/themes?id=custom-window">HBuilderX 自定义主题</a>，详细请参考HBuilderX自定义主题文档。</p>
+<p>除此之外，EasyGit 1.7.4版本，设置项 <code>EasyGit.theme.siderBar</code>和<code>EasyGit.theme.editor</code> 用于自定义EasyGit源代码管理器视图和日志视图主题。</p>
+<ul>
+<li>将以下json内容，拷贝到HBuilderX 【设置 - 源码视图】，注意内容格式。</li>
+<li>HBuilderX【设置 - 源码视图】，修改<code>EasyGit.theme.siderBar</code>和<code>EasyGit.theme.editor</code>值后，需要重启HBuilderX才能生效</li>
+<li>自定义颜色，必须为十六进制颜色，比如<code>#FFFFFF</code>或<code>#FFF</code></li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// EasyGit 源代码管理器视图可自定义的颜色</span></span><br><span class="line">&quot;EasyGit.theme.siderBar&quot;: &#123;</span><br><span class="line">	&quot;background&quot;: &quot;&quot;,</span><br><span class="line">	&quot;fontColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;lineColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;inputColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;inputBgColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;inputLineColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;scrollbarColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;remarkTextColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;menuBackground&quot;: &quot;&quot;,</span><br><span class="line">	&quot;liHoverBackground&quot;: &quot;&quot;,</span><br><span class="line">	&quot;cursorColor&quot;: &quot;&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// EasyGit 日志视图可自定义的颜色</span></span><br><span class="line">&quot;EasyGit.theme.editor&quot;: &#123;</span><br><span class="line">	&quot;background&quot;: &quot;&quot;,</span><br><span class="line">	&quot;fontColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;lineColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;inputColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;inputBgColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;inputLineColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;scrollbarColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;remarkTextColor&quot;: &quot;&quot;,</span><br><span class="line">	&quot;menuBackground&quot;: &quot;&quot;,</span><br><span class="line">	&quot;liHoverBackground&quot;: &quot;&quot;,</span><br><span class="line">	&quot;cursorColor&quot;: &quot;&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+</article>
+
+<div id="paginator">
+  
 </div>
-
-
-  <div class="book-comments">
-    
-
-
-
-
-  </div>
-
-
-
-<script src="/js/book-post.js"></script>
 
         </div>
       </div>
@@ -252,7 +249,7 @@ function sidebar_toggle() {
     <!-- Author title -->
     <div class="author-title">
       <div>oneone</div>
-      <div>2021-01-06</div>
+      <div>2022-03-28</div>
     </div>
   </div>
 
